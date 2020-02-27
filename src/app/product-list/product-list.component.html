@@ -1,0 +1,22 @@
+<div class="products">
+<app-product
+(subscribed)="updateList($event)"
+
+[name]="item.name"
+ [desc]="item.desc"
+  [price]="item.price"
+  *ngFor="let item of products"
+  
+  ></app-product>
+<!--
+<app-product name="OPPO" desc="Smart Phone" price="23333"></app-product>
+<app-product name="VIVO" desc="Smart Phone" price="5555"></app-product>
+<app-product name="Sony" desc="Smart Phone" price="66666"></app-product>
+
+-->
+
+<ul *ngFor="let item of subscribed">
+    <li>{{item}}</li>
+</ul>
+</div>
+
